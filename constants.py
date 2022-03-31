@@ -5,9 +5,21 @@ import pathlib
 PATH = pathlib.Path(__file__).parent.resolve()
 API_TEMP_FILENAME = "api_temp_file.csv"
 SENSOR_TEMP_FILENAME = "sensor_temp.csv"
+
+ALL_FEATURES = ["temp", "tod", "season",
+            "pressure", "humidity", "dew_pt", "clouds",
+            "wind_speed", "wind_deg", "time_diff_normalized"]
+
 FEATURES = ["temp", "tod", "season",
             "pressure", "humidity", "dew_pt", "clouds",
             "wind_speed", "wind_deg"]
+
+FEATURES_2 = ["temp", "tod", "clouds", "wind_speed", 
+              "wind_deg", "time_diff_normalized"]
+
+FEATURES_3 = ["temp", "tod", "season",
+            "pressure", "humidity", "dew_pt", "clouds",
+            "wind_speed", "wind_deg", "time_diff_normalized"]
 
 
 def tensorflow_shutup():
