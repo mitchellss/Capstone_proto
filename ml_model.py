@@ -1,6 +1,7 @@
 import argparse
 from hashlib import new
 import pathlib
+import re
 import sys
 from constants import *
 tensorflow_shutup()
@@ -36,7 +37,7 @@ data = pd.read_csv(PATH / args.path / "ml" / "all.csv")
 
 sensor_titles = []
 for column_name in data:
-    if len(column_name) > 15 and len(column_name) < 20:
+    if not re.search('[a-zA-Z]', column_name):
         sensor_titles.append(column_name)
 
 for sensor_id in sensor_titles:  
